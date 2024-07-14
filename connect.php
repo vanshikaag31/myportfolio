@@ -1,4 +1,5 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$firstName = $_POST['firstName'];
 	$lastName = $_POST['lastName'];
 	$email = $_POST['email'];
@@ -11,7 +12,7 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into registration(firstName, lastName, email, number, message) values(?, ?, ?, ?, ?)");
+		$stmt = $conn->prepare("insert into users(firstName, lastName, email, number, message) values(?, ?, ?, ?, ?)");
 		$stmt->bind_param("ssssi", $firstName, $lastName, $email, $message, $number);
 		$execval = $stmt->execute();
 		echo $execval;
@@ -19,4 +20,5 @@
 		$stmt->close();
 		$conn->close();
 	}
+}
 ?>
