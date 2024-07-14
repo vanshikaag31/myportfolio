@@ -63,7 +63,7 @@
         <h1 class="section-title">About <span>me</span></h1>
         <h2>Front End Developer</h2>
 <p>"I specialize in front-end development, blending a passion for creating compelling user experiences with technical expertise in HTML5, CSS3, and JavaScript. Proficient in frameworks such as React and Vue.js, I excel in building responsive and visually appealing web applications that prioritize accessibility and performance. With a collaborative mindset, I thrive in team environments, contributing innovative ideas and driving projects forward. Committed to staying abreast of industry trends, I continuously enhance my skills to deliver cutting-edge solutions that redefine user interaction and satisfaction."</p>
-        <a href="#" class="cta">Download Resume</a>
+        <a href="https://drive.google.com/file/d/1U-iGgnr8jMV3v_VO2gd1pWWKICFX4DuC/view?usp=drive_link" class="cta">Download Resume</a>
       </div>
     </div>
   </section>
@@ -155,17 +155,17 @@
       <div>
         <h1 class="section-title">Contact <span>BLOCK</span></h1>
       </div>
-      <form action="#">
+      <form action="connect.php" method="POST">
         <div class="input-box">
-          <input type="text" placeholder="Full Name">
-          <input type="email" placeholder="Email-Address">
+          <input type="text" placeholder="First Name" name="firstName">
+          <input type="text" placeholder="Last Name" name="lastName">
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Mobile number">
-          <input type="text" placeholder="Email subject">
+          <input type="number" placeholder="Mobile number" name="number">
+          <input type="email" placeholder="Email" name="email">
         </div>
 
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" name="message"></textarea>
         <input type="submit" value="Send Message" class="btn">
       </form>
     </div>
